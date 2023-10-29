@@ -32,3 +32,11 @@ async function updateTickers() {
 
 updateTickers();
 
+// Get the search input element
+const searchBar = document.getElementById('search-bar');
+
+// Add an event listener for when the user types in the search bar
+searchBar.addEventListener('input', function () {
+    const searchTerm = searchBar.value.toLowerCase();
+    // Implement search functionality here, e.g., filter and display matching results
+});
