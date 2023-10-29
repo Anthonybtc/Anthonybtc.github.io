@@ -146,3 +146,19 @@ h1 {
     
 }
 
+/* Existing styles */
+
+/* Style for the search bar */
+.search-bar {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#coin-search {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+

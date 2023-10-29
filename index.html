@@ -6,17 +6,56 @@
     <title>Coinbase API Live Prices</title>
     <link rel="stylesheet" href="ticker.css">
     <link rel="stylesheet" type="text/css" href="ticker.css">
+    <link rel="stylesheet" href="light.css" id="theme-stylesheet">
+
 </head>
+
+    <style>
+        /* Add some CSS to style the search bar */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #f2f2f2;
+            border-radius: 4px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #search-input {
+            border: none;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #search-button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        #search-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
 <body>
     <header>
         <h1>Coinbase API Live Prices</h1>
     </header>
     
-    <div class="ticker-container" id="bitcoin-ticker">
-        <img src="Bitcoin.png" alt="coin-holders" class="coin-holders">
-        <span class="coin-price"> <span id="bitcoin-price">Loading...</span></span>
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for cryptocurrencies...">
+        <button id="search-button">Search</button>
     </div>
-    
+ 
+    <button id="theme-toggle">Toggle Theme</button>
+
     <!-- Add LinkedIn Button -->
     <div class="linkedin-button">
         <a href="https://www.linkedin.com/in/anthony-defabiis-a778b5160/" target="_blank">
@@ -25,19 +64,44 @@
         </a>
     </div>
 
+    <div class="ticker-container" id="bitcoin-ticker">
+        <img src="Bitcoin.png" alt="coin-holders" class="coin-holders">
+        <span class="coin-price"> <span id="bitcoin-price">Loading...</span></span>
+    </div>
+
     <div class="ticker-container" id="litecoin-ticker">
         <img src="ltc.png" alt="coin-holders" class="coin-holders">
         <span class="coin-price"> <span id="litecoin-price">Loading...</span></span>
     </div>
 
     <div class="ticker-container" id="dogecoin-ticker">
-        <img src="doge.png" alt="Coinbase Logo" class="coin-holders">
+        <img src="doge.png" alt="coin-holders" class="coin-holders">
         <span class="coin-price"> <span id="dogecoin-price">Loading...</span></span>
     </div>
 
     <div class="ticker-container" id="cardano-ticker">
-        <img src="ada.png" alt="Coinbase Logo" class="coin-holders">
+        <img src="ada.png" alt="coin-holders" class="coin-holders">
         <span class="coin-price"> <span id="cardano-price">Loading...</span></span>
+    </div>
+
+    <div class="ticker-container" id="xrp-ticker">
+        <img src="xrp.png" alt="coin-holders" class="coin-holders">
+        <span class="coin-price"> <span id="xrp-price">Loading...</span></span>
+    </div>
+    
+    <div class="ticker-container" id="dot-ticker">
+        <img src="dot.png" alt="coin-holders" class="coin-holders">
+        <span class="coin-price"> <span id="dot-price">Loading...</span></span>
+    </div>
+    
+    <div class="ticker-container" id="xlm-ticker">
+        <img src="xlm.png" alt="coin-holders" class="coin-holders">
+        <span class="coin-price"> <span id="xlm-price">Loading...</span></span>
+    </div>
+    
+    <div class="ticker-container" id="link-ticker">
+        <img src="link.png" alt="coin-holders" class="coin-holders">
+        <span class="coin-price"> <span id="link-price">Loading...</span></span>
     </div>
 
     <div class="coin coin-1"></div>
@@ -51,10 +115,22 @@
     <div class="coin coin-9"></div>
     <div class="coin coin-10"></div>
 </body>
+
+<!-- Dark/Light-->
+<script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const themeStylesheet = document.getElementById('theme-stylesheet');
+    let isDarkMode = false;
+
+    toggleButton.addEventListener('click', () => {
+        if (isDarkMode) {
+            themeStylesheet.setAttribute('href', 'light.css');
+        } else {
+            themeStylesheet.setAttribute('href', 'dark.css');
+        }
+        isDarkMode = !isDarkMode;
+    });
+</script>
+
 <script src="ticker.js"></script>
 </html>
-
-
-</div>
-<button id="refresh-button">Refresh Prices</button>
-<footer>
