@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="ticker.css">
     <link rel="stylesheet" type="text/css" href="ticker.css">
     <link rel="stylesheet" href="light.css" id="theme-stylesheet">
-
+ <body>
+    
+ </body>
 </head>
 
     <style>
@@ -40,7 +42,7 @@
         }
 
         #search-button:hover {
-            background-color: #0056b3;
+            beackground-color: #0056b3;
         }
     </style>
 
@@ -53,8 +55,9 @@
         <input type="text" id="search-input" placeholder="Search for cryptocurrencies...">
         <button id="search-button">Search</button>
     </div>
- 
-    <button id="theme-toggle">Toggle Theme</button>
+
+
+
 
     <!-- Add LinkedIn Button -->
     <div class="linkedin-button">
@@ -114,23 +117,11 @@
     <div class="coin coin-8"></div>
     <div class="coin coin-9"></div>
     <div class="coin coin-10"></div>
+
+    
+    <img src="Banner2.png" alt="Banner Image" style="width: 100%; display: block;">
 </body>
 
-<!-- Dark/Light-->
-<script>
-    const toggleButton = document.getElementById('theme-toggle');
-    const themeStylesheet = document.getElementById('theme-stylesheet');
-    let isDarkMode = false;
-
-    toggleButton.addEventListener('click', () => {
-        if (isDarkMode) {
-            themeStylesheet.setAttribute('href', 'light.css');
-        } else {
-            themeStylesheet.setAttribute('href', 'dark.css');
-        }
-        isDarkMode = !isDarkMode;
-    });
-</script>
 
 <script src="ticker.js"></script>
 </html>

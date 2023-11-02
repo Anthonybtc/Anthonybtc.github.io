@@ -8,7 +8,7 @@ async function getCryptoPrice(endpoint) {
         return "N/A";
     }
 }
-
+ 
 async function updateTickers() {
     const bitcoinTicker = document.getElementById("bitcoin-price");
     const litecoinTicker = document.getElementById("litecoin-price");
@@ -56,9 +56,3 @@ searchBar.addEventListener('input', function () {
     const searchTerm = searchBar.value.toLowerCase();
     // Implement search functionality here, e.g., filter and display matching results
 });
-
-
-
-
---
-
